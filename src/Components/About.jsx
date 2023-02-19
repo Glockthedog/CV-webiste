@@ -1,10 +1,8 @@
-import { React, useState } from "react";
-import ScrollToTop from "react-scroll-to-top";
+import { React} from "react";
+// import ScrollToTop from "react-scroll-to-top";
 
 
 const About = () => {
-  const [nav] = useState(false);
-
   return (
     <div
       name="about"
@@ -127,8 +125,7 @@ const About = () => {
       <div></div>
       <div>
         {" "}
-        {nav ? null : (
-          <ScrollToTop
+        {/* <ScrollToTop
             style={{
               height: "35px",
               padding: "6px",
@@ -144,8 +141,8 @@ const About = () => {
             top="800"
             color="white"
             smooth
-          />
-        )}
+          /> */}
+        
       </div>
     </div>
   );

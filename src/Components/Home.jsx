@@ -1,5 +1,5 @@
 import { React, useEffect } from "react";
-import Typed from "react-typed";
+// import Typed from "react-typed";
 import ME from "../Assets/me4.png";
 const Home = () => {
   useEffect(() => {
@@ -33,7 +33,7 @@ const Home = () => {
           <h2 className="text-lg md:text-3xl md:mt-6 text-[#232323] dark:text-white">
             Working with:
             <span>
-              <Typed
+              {/* <Typed
                 className="text-blue-800 ml-2 font-bold dark:font-bold dark:text-teal-300"
                 strings={[
                   "HTML",
@@ -47,7 +47,7 @@ const Home = () => {
                 backSpeed={80}
                 showCursor={false}
                 loop
-              />
+              /> */}
             </span>
           </h2>
         </div>
