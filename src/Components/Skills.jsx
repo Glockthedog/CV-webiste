@@ -10,7 +10,7 @@ const Skills = () => {
   return (
     <div name='skills' className='w-full h-screen bg-gradient-to-b from-gray-200 to-blue-200 dark:bg-gradient-to-b dark:from-blue-800 dark:to-teal-500 text-white'>
         {/*container */}
-     <div className='max-w-[1000px] lg:max-w-[80%] p-6 mx-auto flex flex-col justify-center text-center w-full h-full'>
+     <div className='max-w-[1000px] lg:max-w-[800px] p-6 mx-auto flex flex-col justify-center text-center w-full h-full'>
         <div className='sm:mx-auto pb-16'>
             <p className='dark:text-white md:text-4xl text-black text-2xl font-bold inline'>Skills</p>
             

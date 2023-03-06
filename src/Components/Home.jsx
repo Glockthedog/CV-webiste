@@ -1,12 +1,18 @@
-import { React, useEffect } from "react";
-// import Typed from "react-typed";
+import { React, useEffect} from "react";
 import ME from "../Assets/me4.png";
+import Typewriter from 'typewriter-effect';
+
+// new Typewriter ('#typewriter',{
+//   strings:['Hello'],
+//   autoStart:true,
+// });
+
 const Home = () => {
-  useEffect(() => {
+  useEffect(()=>{
     const html = document.querySelector("html");
     html.classList.add("dark");
-  }, []);
 
+  }, [])
   return (
     <div
       name="home"
@@ -21,8 +27,8 @@ const Home = () => {
             Alex
           </span>{" "}
         </p>
-
-        <div className="bg-gradient-to-b to-blue-400 from-gray-300 mx-auto rounded-t-full shadow-lg shadow-blue-500 dark:shadow-lg dark:shadow-gray-400  dark:bg-gradient-to-b dark:from-blue-300 dark:to-teal-600 overflow-hidden w-60 h-50">
+          
+        <div className="bg-gradient-to-b to-blue-400 from-gray-300 mx-auto rounded-t-full shadow-lg shadow-blue-500 dark:shadow-md dark:shadow-gray-200  dark:bg-gradient-to-b dark:from-blue-300 dark:to-teal-600 overflow-hidden w-60 h-50">
           <img className=" mt-4" alt="/" src={ME}></img>
           <h2 className="text-[#232323] text-lg md:text-xl text-center pt-2 dark:text-white">
             {" "}
@@ -30,9 +36,17 @@ const Home = () => {
           </h2>
         </div>
         <div>
-          <h2 className="text-lg md:text-3xl md:mt-6 text-[#232323] dark:text-white">
-            Working with:
+          <h2 className="text-lg flex md:text-3xl md:mt-6 text-[#232323] dark:text-white">
+            Working with:  <span className="ml-2 dark:text-teal-300 dark:font-bold text-blue-800 font-bold"><Typewriter className='dark:text-red-300' options={{
+              strings:['HTML','CSS','JAVASCRIPT','REACT','TAILWIND'],
+              autoStart:true,
+              loop:true,
+              deleteSpeed:'natural'
+            }}
+            />
+            </span>
             <span>
+        
               {/* <Typed
                 className="text-blue-800 ml-2 font-bold dark:font-bold dark:text-teal-300"
                 strings={[
@@ -51,13 +65,6 @@ const Home = () => {
             </span>
           </h2>
         </div>
-
-        {/* <div>
-        <button className='bg-gradient-to-b dark:shadow-white to-teal-300 border-black shadow-lg shadow-gray-200 dark:border-white from-blue-500 dark:text-white text-black-200 border-2 border-gray mx-auto sm:mx-1 dark:bg-gradient-to-b dark:from-teal-200 dark:to-blue-600 group py-2 px-2 rounded-xl my-3 flex items-center dark:hover:bg-[#20d892] dark:hover:border-[#21e499]'
-        ><a href="AlexGlocknitzerCV.pdf" download>Download CV</a>
-        <span className=''><HiArrowNarrowDown className='ml-2' /></span>
-        </button>
-    </div> */}
       </div>
     </div>
   );

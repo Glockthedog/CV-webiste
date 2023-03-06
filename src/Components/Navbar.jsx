@@ -73,10 +73,9 @@ const Navbar = () => {
        </div>
 
        {/* mobile menu */}
-       {/* <ul className={!nav ? 'hidden': ' absolute text-white top-4 left-[48%]  transition-all  w-[52%] bg-gradient-to-b to-green-300 from-blue-400 rounded-xl dark:bg-gradient-to-b dark:to-teal-800 dark:text-white dark:from-blue-400 flex flex-col '}>  */}
        <ul
-        className={` fixed  right-1 py-2 items-center justify-center  transform transition-transform ${
-          nav ? ' translate-y-4 top-10' : 'hidden'
+        className={` fixed  right-1 py-2 items-center justify-center ${
+          nav ? 'top-14 right-1 ease-out transition-all' : ' ease-in-out transition-all top-14 right-[-15%]'
         } max-w-[12%] h-[40%] bg-gradient-to-b grid grid-cols-1 from-blue-300 to-teal-500 rounded-full shadow-lg text-white dark:bg-gradient-to-b  dark:from-gray-400 dark:to-blue-400 dark:text-white`}
       >
        
@@ -85,22 +84,6 @@ const Navbar = () => {
             <svg className='fill-gray-100'xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/> <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/> </svg>
         </Link>
             </li>
-
-        {/* <li className='flex items-center justify-center'>
-        <NavLink
-        exact
-        activeClassName="bg-white rounded-full"
-        onClick={handleClick}
-        to="home"
-        smooth={true}
-        duration={600}
-         >
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
-        <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
-        <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
-      </svg>
-    </NavLink>
-  </li> */}
             <li className=' flex items-center justify-center'>
             <Link onClick={handleClick}  to="about"  smooth={true} duration={600}>
             <svg className='fill-gray-100'xmlns="http://www.w3.org/2000/svg" width="16" height="16"  class="bi bi-person" fill="currentColor" viewBox="0 0 16 16"> <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/> </svg>

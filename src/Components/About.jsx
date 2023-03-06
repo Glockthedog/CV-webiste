@@ -1,8 +1,31 @@
-import { React} from "react";
-// import ScrollToTop from "react-scroll-to-top";
-
+import { React, useState, useEffect} from "react";
+import {BiArrowFromBottom} from 'react-icons/bi'
 
 const About = () => {
+const  [isVisible, setIsVisible] = useState(false);
+
+const toggleVisibility = () => {
+    if (window.scrollY > 500){
+        setIsVisible(true);
+    } else {
+        setIsVisible(false)
+    }
+}
+
+const scrollToTop = () =>{
+    window.scrollTo({top:0, behavior:"smooth"})
+}
+
+useEffect (()=>{
+window.addEventListener('scroll', toggleVisibility);
+return () =>{
+    window.removeEventListener('scroll', toggleVisibility);
+
+}
+
+},[]);
+
+
   return (
     <div
       name="about"
@@ -16,7 +39,10 @@ const About = () => {
             </p>
           </div>
         </div>
-
+        <div className={`fixed bottom-2 right-4 ${isVisible? 'opacity-200 cursor-pointer inline-flex items-center p-2 text-2xl rounded-full shadow-sm text-white bg-blue-300 transition-opacity focus:outline-none focus:ring-4 focus:ring-offset-2 focus:ring-black': 'opacity-0'}`} onClick={scrollToTop}>
+     
+          <BiArrowFromBottom  />
+         </div>
         <div className="max-w-[2000px] lg:items-center lg:h-screen lg:justify-center md:flex w-full sm:text-2xl grid gap-8 px-6">
           <ul class=" border-l w-[90%] lg:border-none mt-8 border-black dark:border-white">
             <li class="mb-10 lg:border-l border-black dark:border-white ml-6">
@@ -44,7 +70,7 @@ const About = () => {
               <time class="md:text-md lg:text-2xl block mb-2 text-sm font-normal leading-none text-gray-800 dark:text-gray-200">
                 Started October 2022
               </time>
-              <p class="md:text-2xl sm:w-auto lg:w-[80%] lg:text-3xl mb-4 text-base  font-normal w-80 text-gray-600 dark:text-gray-200">
+              <p class="md:text-2xl sm:w-auto lg:w-[80%] lg:text-3xl mb-4 text-base font-normal  text-gray-600 dark:text-gray-200">
                 {" "}
                 I am a web development enthusiast who has been pursuing a career
                 in this field for the past 5-6 months. During this time, I have
@@ -97,7 +123,7 @@ const About = () => {
               <time class="block lg:text-2xl md:text-md mb-2 text-sm font-normal leading-none text-gray-800 dark:text-gray-200">
                 Joined company November 2019
               </time>
-              <p class="md:text-2xl lg:w-[80%] sm:w-auto lg:text-3xl text-base font-normal w-80 text-gray-600 dark:text-gray-200">
+              <p class="md:text-2xl lg:w-[80%] sm:w-auto  lg:text-3xl  text-base font-normal text-gray-600 dark:text-gray-200">
                 I am an International Gaming Operations specialist. I manage
                 promotional content and on-site placement for the gaming
                 industry. I collaborate across regions and stay up-to-date with
@@ -106,7 +132,7 @@ const About = () => {
               <a
                 href="https://www.linkedin.com/in/alex-glocknitzer-5605a5190/"
                 download
-                class="inline-flex border-xl dark:border-white border-blue-500 dark:shadow-gray-200 shadow-blue-900 shadow-md shadow-gray-300 items-center  lg:hidden px-4 py-2 text-sm mt-4 font-medium  text-blue-700 bg-gray-400 border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-teal-300 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"
+                class="inline-flex border-xl dark:border-white border-blue-500 dark:shadow-gray-200 shadow-blue-900 shadow-md items-center  lg:hidden px-4 py-2 text-sm mt-4 font-medium  text-blue-700 bg-gray-400 border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-teal-300 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"
               >
                 {" "}
                 <svg
